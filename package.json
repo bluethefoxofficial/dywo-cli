@@ -1,6 +1,6 @@
 {
   "name": "dywo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dywo - A flexible CLI tool for web project management",
   "main": "bin/dywo.js",
   "bin": {
