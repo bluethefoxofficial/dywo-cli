@@ -1,6 +1,6 @@
 {
   "name": "dywo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dywo - A flexible CLI tool for web project management",
   "main": "bin/dywo.js",
   "bin": {
@@ -62,7 +62,7 @@
     "node": ">=18.0.0"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/bluethefoxofficial/dywo-cli.git"
-}
+    "type": "git",
+    "url": "https://github.com/bluethefoxofficial/dywo-cli.git"
+  }
 }
