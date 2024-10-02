@@ -1,0 +1,14 @@
+{
+    "name": "dywo-client",
+    "version": "1.0.0",
+    "description": "Dywo client-side application",
+    "main": "src/main.js",
+    "scripts": {
+      "start": "dywo serve",
+      "build": "dywo compile client",
+      "test": "dywo test client"
+    },
+    "keywords": ["dywo", "web", "client"],
+    "author": "",
+    "license": "ISC"
+  }

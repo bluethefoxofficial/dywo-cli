@@ -1,0 +1,8 @@
+{
+    "assets": [
+      "lib/templates/**/*"
+    ],
+    "scripts": [
+      "lib/**/*.js"
+    ]
+  }

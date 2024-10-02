@@ -1,0 +1,64 @@
+{
+  "name": "dywo",
+  "version": "1.0.0",
+  "description": "Dywo - A flexible CLI tool for web project management",
+  "main": "bin/dywo.js",
+  "bin": {
+    "dywo": "./bin/dywo.js"
+  },
+  "scripts": {
+    "start": "node bin/dywo.js",
+    "prebuild": "node scripts/prepare-build.js",
+    "build": "pkg .",
+    "test": "jest"
+  },
+  "keywords": [
+    "cli",
+    "web",
+    "bundler",
+    "project-management"
+  ],
+  "author": "Bluethefox",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^7.32.0",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "inquirer": "^8.2.0",
+    "javascript-obfuscator": "^2.19.0",
+    "prettier": "^2.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "pkg": "^5.8.1",
+    "rcedit": "^4.0.1"
+  },
+  "pkg": {
+    "scripts": [
+      "bin/**/*.js",
+      "lib/**/*.js"
+    ],
+    "assets": [
+      "lib/templates/**/*",
+      "assets/dywo-icon.ico"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
