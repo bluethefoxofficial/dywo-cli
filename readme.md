@@ -1,9 +1,9 @@
 # Dywo CLI
 
-[![npm version](https://img.shields.io/npm/v/dywo-cli.svg)](https://www.npmjs.com/package/dywo-cli)
+[![npm version](https://img.shields.io/npm/v/dywo.svg)](https://www.npmjs.com/package/dywo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm downloads](https://img.shields.io/npm/dm/dywo-cli.svg)](https://www.npmjs.com/package/dywo-cli)
-[![GitHub stars](https://img.shields.io/github/stars/bluethefoxofficial/dywo-cli.svg)](https://github.com/bluethefoxofficial/dywo-cli/stargazers)
+[![npm downloads](https://img.shields.io/npm/dm/dywo.svg)](https://www.npmjs.com/package/dywo)
+[![GitHub stars](https://img.shields.io/github/stars/bluethefoxofficial/dywo.svg)](https://github.com/bluethefoxofficial/dywo-cli/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/bluethefoxofficial/dywo-cli.svg)](https://github.com/bluethefoxofficial/dywo-cli/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/bluethefoxofficial/dywo-cli.svg)](https://github.com/bluethefoxofficial/dywo-cli/pulls)
 [![Build Status](https://img.shields.io/travis/bluethefoxofficial/dywo-cli/main.svg)](https://travis-ci.org/bluethefoxofficial/dywo-cli)
@@ -25,10 +25,10 @@ Dywo is a flexible Command Line Interface (CLI) tool for web project management.
 
 ## Installation
 
-### Option 1: Install from npm (coming soon)
+### Option 1: Install from npm
 
 ```bash
-npm install -g dywo-cli
+npm install -g dywo
 ```
 
 ### Option 2: Install from source
