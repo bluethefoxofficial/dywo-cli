@@ -35,7 +35,7 @@ npm install -g dywo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/dywo-cli.git
+   git clone https://github.com/bluethefoxofficial/dywo-cli.git
    cd dywo-cli
    ```
 
