@@ -1,0 +1,52 @@
+name: Build on Push or Pull Request
+
+# Trigger the workflow on push or pull request events
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment with the version specified in package.json
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Install project dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run prebuild script
+      - name: Run prebuild script
+        run: npm run prebuild
+
+      # Build the project using pkg
+      - name: Build the project
+        run: npm run build
+
+      # Upload the build artifacts (dist folder)
+      - name: Upload built artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/
+
+      # Optionally, push the built artifacts to the GitHub release or other location
+      - name: Create a GitHub release (optional)
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
