@@ -1,13 +1,13 @@
-name: Build on Push or Pull Request
+name: Build and Release on Push or Pull Request
 
 # Trigger the workflow on push or pull request events
 on:
   push:
     branches:
-      - main  
+      - main  # Adjust to the branch you want
   pull_request:
     branches:
-      - main  
+      - main  # Adjust to the branch you want
 
 jobs:
   build:
@@ -43,10 +43,17 @@ jobs:
           name: dist
           path: dist/
 
-      # Optionally, push the built artifacts to the GitHub release or other location
-      - name: Create a GitHub release (optional)
-        uses: softprops/action-gh-release@v1
-        with:
-          files: dist/*
+      # Create a new Git tag
+      - name: Create Git Tag
+        id: tag
+        run: |
+          TAG=$(date +'%Y%m%d%H%M%S')  # Create a tag based on timestamp
+          git tag $TAG
+          git push origin $TAG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Create a GitHub release using the new tag
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+       
