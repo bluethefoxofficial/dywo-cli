@@ -4,7 +4,7 @@ const { program } = require('commander');
 const chalk = require('chalk');
 
 program
-  .version('1.0.0')
+  .version('1.0.8')
   .description('Dywo - Dynamic Web One: A CLI for modern SPA development');
 
 program
@@ -40,11 +40,12 @@ program
     require('../lib/commands/add')(type, name, options);
   });
 
-program
+  program
   .command('test')
-  .description('Run tests')
-  .option('-w, --watch', 'Watch for changes and rerun tests')
-  .option('-c, --coverage', 'Collect test coverage')
+  .description('Run tests for the Dywo project')
+  .option('-t, --target <target>', 'Specify the target (client or server)', 'client')
+  .option('-w, --watch', 'Watch for changes and rerun tests', false)
+  .option('-c, --coverage', 'Collect test coverage', false)
   .action((options) => {
     require('../lib/commands/test')(options);
   });
