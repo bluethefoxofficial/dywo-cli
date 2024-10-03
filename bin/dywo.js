@@ -50,6 +50,13 @@ program
     require('../lib/commands/test')(options);
   });
 
+  program
+  .command('create-test')
+  .description('Create a test file for a component or module')
+  .option('-f, --file <file>', 'The file to create a test for')
+  .action((options) => {
+    require('../lib/commands/createTest')(options);
+  });
 program
   .command('lint')
   .description('Lint the project')
