@@ -56,4 +56,8 @@ jobs:
       # Create a GitHub release using the new tag
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
-       
+        with:
+          tag_name: ${{ steps.tag.outputs.TAG }}
+          files: dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
