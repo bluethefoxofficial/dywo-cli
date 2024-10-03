@@ -1,6 +1,6 @@
 {
   "name": "dywo",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Dywo - A flexible CLI tool for web project management",
   "main": "bin/dywo.js",
   "bin": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
+    "compression-webpack-plugin": "^11.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "express": "^4.17.1",
@@ -30,11 +31,13 @@
     "glob": "^7.2.0",
     "html-webpack-plugin": "^5.5.0",
     "inquirer": "^8.2.0",
-    "javascript-obfuscator": "^2.19.0",
+    "javascript-obfuscator": "^4.1.1",
     "prettier": "^2.5.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^5.1.0"
   },
   "devDependencies": {
     "jest": "^27.4.7",
