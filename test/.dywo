@@ -1,0 +1,13 @@
+{
+  "structure": {
+    "client": {
+      "src": "./src",
+      "output": "./build"
+    }
+  },
+  "scripts": {
+    "client:dev": "webpack serve --mode development --open",
+    "client:build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  }
+}
